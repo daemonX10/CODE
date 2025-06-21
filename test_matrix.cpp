@@ -48,3 +48,27 @@ int maxSumMatrix(int n, int m, vector<vector<int>> &mat, int val) {
     
     return ans;
 }
+
+int main() {
+    int t;
+    cin >> t;
+    
+    while (t--) {
+        int n, m;
+        cin >> n >> m;
+        
+        vector<vector<int>> mat(n, vector<int>(m));
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                cin >> mat[i][j];
+            }
+        }
+        
+        int val;
+        cin >> val;
+        
+        cout << maxSumMatrix(n, m, mat, val) << endl;
+    }
+    
+    return 0;
+}
